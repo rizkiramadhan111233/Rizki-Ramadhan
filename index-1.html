@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV Rizki Ramadhan</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="cv">
+    <aside class="sidebar">
+      <div class="photo-wrap">
+        <img id="profile-photo" src="foto.jpg" alt="Foto formal Rizki Ramadhan"
+             onerror="this.style.display='none'; document.getElementById('photo-placeholder').style.display='flex';">
+        <div id="photo-placeholder" class="photo-placeholder">
+          <span>FOTO<br>FORMAL</span>
+        </div>
+      </div>
+      <label class="upload-label" for="photo-upload">Pilih foto dari perangkat</label>
+      <input id="photo-upload" type="file" accept="image/*">
+      <p class="sidebar-note">Untuk menyimpan foto pada CV, ganti file <strong>foto.jpg</strong> dengan foto formal kamu.</p>
+
+      <section class="side-section">
+        <h2>DATA DIRI</h2>
+        <div class="side-item"><span class="side-label">Umur</span><span>17 tahun</span></div>
+        <div class="side-item"><span class="side-label">Tanggal lahir</span><span>20 April 2009</span></div>
+        <div class="side-item"><span class="side-label">Alamat</span><span>Kampung Cipicung, Kecamatan Baleendah, Kabupaten Bandung, Jawa Barat</span></div>
+      </section>
+
+      <section class="side-section">
+        <h2>HOBI</h2>
+        <div class="hobby-list">
+          <span>Lari</span><span>Basket</span><span>Voli</span><span>Sepak bola</span>
+          <span>Bulu tangkis</span><span>Hiking</span><span>Boxing</span>
+        </div>
+      </section>
+    </aside>
+
+    <section class="main-content">
+      <header class="hero">
+        <p class="eyebrow">CURRICULUM VITAE</p>
+        <h1>RIZKI<br><span>RAMADHAN</span></h1>
+        <div class="accent-line"></div>
+        <p class="intro">Pribadi yang disiplin, bertanggung jawab, dan memiliki semangat tinggi untuk terus belajar serta berkembang.</p>
+      </header>
+
+      <section class="content-section">
+        <div class="section-heading"><span class="section-number">01</span><h2>PROFIL SINGKAT</h2></div>
+        <p>Saya adalah lulusan SMA yang siap memperoleh pengalaman baru, mampu mengikuti arahan dengan baik, serta berusaha memberikan hasil terbaik dalam setiap tanggung jawab.</p>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading"><span class="section-number">02</span><h2>PENGALAMAN ORGANISASI</h2></div>
+        <div class="experience">
+          <div class="timeline-dot"></div>
+          <div><h3>Organisasi Pencinta Alam</h3><p>Mengikuti kegiatan organisasi Pencinta Alam untuk belajar kerja sama, kepedulian terhadap lingkungan, dan kedisiplinan.</p></div>
+        </div>
+        <div class="experience">
+          <div class="timeline-dot"></div>
+          <div><h3>Ekstrakurikuler Bahasa Jepang</h3><p>Mengikuti ekstrakurikuler Jepang untuk menambah wawasan dan mempelajari bahasa serta budaya Jepang.</p></div>
+        </div>
+        <div class="experience">
+          <div class="timeline-dot"></div>
+          <div><h3>Anggota Paskibra</h3><p>Pernah menjadi anggota Paskibra, yang melatih kedisiplinan, tanggung jawab, dan kekompakan tim.</p></div>
+        </div>
+      </section>
+
+      <section class="content-section">
+        <div class="section-heading"><span class="section-number">03</span><h2>KEAHLIAN</h2></div>
+        <ul class="skills">
+          <li>Mampu bekerja di bawah tekanan.</li>
+          <li>Bertanggung jawab dan disiplin.</li>
+          <li>Mampu bekerja sama dalam tim.</li>
+          <li>Cepat belajar dan beradaptasi.</li>
+          <li>Memiliki semangat kerja yang tinggi.</li>
+          <li>Mampu bekerja dengan baik sesuai arahan.</li>
+        </ul>
+      </section>
+
+      <footer class="footer"><span>SIAP BELAJAR</span><span>DISIPLIN · KERJA SAMA · TANGGUNG JAWAB</span></footer>
+    </section>
+  </main>
+  <script>
+    const upload = document.getElementById('photo-upload');
+    const photo = document.getElementById('profile-photo');
+    const placeholder = document.getElementById('photo-placeholder');
+    upload.addEventListener('change', (event) => {
+      const file = event.target.files && event.target.files[0];
+      if (!file) return;
+      photo.src = URL.createObjectURL(file);
+      photo.style.display = 'block';
+      placeholder.style.display = 'none';
+    });
+  </script>
+</body>
+</html>
